@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment - HTML Design</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="https://www.theinsightpartners.com/assets/css/owl-carousel/owl.carousel.min.css"> 
+	<link rel="stylesheet" type="text/css" href="https://www.theinsightpartners.com/assets/css/owl-carousel/owl.theme.min.css">
+
+	<style type="text/css">
+		:root {
+			--orange : #ff8c61;
+			--blue : #16a3db;
+			--navyblue : #101e2b;
+			--c-lightgray : #f6f6f6;
+			--c-green: #bcf4f5;
+			--c-blue: #c6e3f3;
+			--c-orange: #ffeede;
+			--c-red: #ffe7dd;
+			--c-black: #122333;
+		}
+		.text-orange {
+			color: var(--orange);	
+		}
+		.bg-navyblue {
+			background-color: var(--navyblue);	
+		}
+		.bg-c-lightgray {
+			background-color: var(--c-lightgray);	
+		}
+		.bg-c-green {
+			background-color: var(--c-green);	
+		}
+		.bg-c-blue {
+			background-color: var(--c-blue);	
+		}
+		.bg-c-orange {
+			background-color: var(--c-orange);	
+		}
+		.bg-c-red {
+			background-color: var(--c-red);	
+		}
+		.bg-c-black {
+			background-color: var(--c-black);	
+		}
+		nav a.nav-link {
+		    font-weight: 500;
+		    color: black;
+		}	
+		.topbar i.fa {
+		    border: 1px solid white;
+		    padding: 0.3rem;
+		    border-radius: 50%;
+		    font-size: .75rem;
+		}
+		.navbar-brand {
+			position: absolute;
+			top: -2.85rem;
+			left: -1%;
+			width: 30%;
+			padding-top: 0.75rem;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+		}
+		.navbar-nav {
+			margin-right: 10rem;
+		}
+
+		.login-btn {
+			background-color: var(--blue);			
+			padding: 0.15rem 1.5rem !important;	
+			border-radius: 0.2rem;
+			border: 0;
+			color: white !important;
+			margin-top: 0.4rem;
+		}
+		#section1 .leftside	h1 {
+			font-size: 2rem;
+		}
+		#section1 .leftside	h1,
+		#section1 .leftside	h1 + p {
+			margin-bottom: 1rem;
+		}
+		#section1 .leftside	{
+			padding-left: 5rem;
+		}
+		#section1 .leftside{
+			z-index: 1;
+		}
+		#section1 .search-form input{
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		#section1 .search-form button{
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			background-color: var(--blue);
+		}
+
+		.title {
+		    text-align: center;
+		    font-size: 2.75rem;
+		    margin-bottom: 0;
+		}
+		#section2 .otp-img {
+			position: relative;
+		    height: 20rem;
+		    width: 20rem;
+		    overflow: hidden;
+		    text-align: center;
+		    background-color: lightgray;
+		    border-radius: 0.35rem;
+		    border: 1px solid #eee;
+		}
+		#section2 .otp-img img {
+		    height: 20rem;
+		    object-fit: cover;
+		}
+		#section2 .otp-img span.year{
+			position: absolute;
+			right: 0;
+			top: 0.75rem;
+			background-color: white;
+			color: var(--navyblue);
+			padding: 0.15rem 0.75rem;
+			font-weight: 600;
+			z-index: 11;
+		}
+
+		#section2 .otp-img .rep-title{
+			position: absolute;
+			bottom: 0;
+			background-color: var(--navyblue);
+			opacity: 0.9;
+			padding: 0.5rem 1rem;
+			color: white;
+			font-size: 1.5rem;
+			line-height: 1.2;	
+		}
+		#section2 .otp-img:hover .rep-title,
+		#section2 .otp-img .rep-overlay{
+			display: none;
+		}
+		#section2 .otp-img .rep-overlay .btn-outline-light{
+			border-radius: 0.25rem;
+		}
+		#section2 .otp-img .rep-overlay h3{
+			margin-top: 3rem;
+			font-size: 1.5rem; 
+			border-bottom: 2px solid white;
+		    padding-bottom: 0.9rem;
+		}
+		#section2 .otp-img .rep-overlay hr{
+			border-bottom: 2px solid white;
+		}
+		#section2 .otp-img:hover .rep-overlay{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: var(--navyblue);
+			opacity: 0.9;
+			color: white;
+		}
+		#section2 .view-all-btn{
+			border-radius: 0.25rem;
+			background-color: var(--blue);
+			padding: 0.35rem 2rem; 
+		}
+		#section2 .view-all-btn:hover{
+			background-color: transparent;
+			color: var(--blue) !important;
+		}
+		#section2 .owl-carousel .owl-nav button.owl-next, 
+		#section2 .owl-carousel .owl-nav button.owl-prev {
+			font-size: 2rem;
+			width: 3rem;
+		}
+
+		#section3{
+			margin-top: 5rem;
+		}
+		#section3 .text {
+			font-weight: 400;
+			line-height: 1.2;
+			font-size: 1.1rem;
+			margin-top: auto;
+		}
+		#section3 .samples {
+			display: flex;
+			flex-direction: column;
+			height: 16rem;
+			background-image: red;
+			margin-bottom: 1.5rem;
+		}
+
+		#section4 .text {
+			font-size: 1.2rem;
+			line-height: 1.2;
+		}
+		#section4 .tbl-best-policy .text{
+			font-size: 1.1rem;
+			font-weight: 500;
+		}
+		#section4 .tbl-best-policy tr td:first-child{
+			border-right: 2px solid #ddd;
+		}
+		#section4 .tbl-best-policy tr:nth-child(even) td{
+			border-right: 2px solid transparent;
+			padding: 0.5rem;
+		}
+		#section5 .latset-pr .pr-text{
+			height: 15rem;
+		}
+		#section5 .latset-pr .pr-img{
+			position: relative;
+			height: 17rem;
+			/*overflow: hidden;*/
+			/*object-fit: cover;*/
+		}
+		#section5 .latset-pr .pr1{
+			background-color: #dcfeff; 
+		}
+		#section5 .latset-pr .pr2{
+			background-color: #ecfefe; 
+		}
+		#section5 .read-all-pr{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 1rem;
+			background-color: var(--blue);
+			width: 100%;
+		}
+		#section5 .pr-img-div {
+			position: relative;
+			height: 18rem;
+			overflow: hidden;
+		}
+		#section5 .pr-div .read-all-pr{
+			display: none;
+		}
+		#section5 .pr-div:hover .read-all-pr{
+			display: block;
+		}
+		#section6 .help{
+			padding: 3rem;
+			color: white;
+			text-align: center;
+		}
+
+		#section7{
+			background-color: #ececec; 
+		}
+		#section7 select + i{
+			position: absolute;
+		    right: 5%;
+		    top: 25%;
+		    color: gray;
+		}
+		#section7 select,
+		#section7 input{
+			background-color: transparent;
+			border: 0;
+			border-radius: 0;
+			border-bottom: 2px solid #bbb;
+			font-style: italic;
+			color: #777;
+		}
+		.form2 {
+		    border-bottom: 2px solid gray;
+		    padding-bottom: 0.5rem;
+		}
+		.form2 input{
+			width: 78%;
+		}
+		.form2 input{
+			background-color: transparent;
+			border: 0;
+			border-radius: 0;
+			font-style: italic;
+			color: #777;
+		}
+		select:focus-visible,
+		input:focus-visible {
+		    outline: 0;
+		}
+		#section7 .reg-btn{
+			margin-top: 2rem;
+			margin-bottom: 3rem;
+			background-color: var(--blue);
+			color: white;
+			border-radius: 0.1rem;
+			float: right;
+			padding: 0.25rem 1rem;
+		}
+		.footer{
+			padding-left: 7rem;
+			padding-right: 7rem;
+		}
+		footer .form2 button{
+			background-color: #384347;
+			border: 0;
+			color: #bbb;
+			border-radius: 0.25rem;
+		}
+
+		footer .title2{
+			color: gray;
+			border-bottom: 1px solid gray;
+			display: inline-block;
+			font-size: 1.2rem;
+			font-weight: 600;	
+		}
+		footer a{
+			text-decoration: none;
+			color: #bbb;
+		}
+		footer .dummy-text{
+			color: #ddd;
+			line-height: 1.1;
+		}
+		footer ul li{
+			line-height: 1.7;
+		}
+		footer .disclaimer {
+			color: #bbb;
+			border-top: 1px solid #bbb;
+			font-size: 0.75rem;
+			padding-top: 0.5rem;
+		}
+		footer .form2 {
+			margin-bottom: 2rem;
+		}
+
+
+		@media only screen and (max-width: 1200px) {
+			.navbar-nav {
+				margin-right: 0rem;
+			}
+			.navbar-brand{
+				width: 23%;
+				padding-top: 0.5rem;
+				margin-left: -2px;
+			}
+			#section5 .pr-div .w-50{
+				width: 75% !important;
+				padding: 1rem; 
+			}
+			.footer {
+			    padding-left: 3rem;
+			    padding-right: 3rem;
+			}
+			.form2 input {
+			    width: 70%;
+			}
+		}
+		@media only screen and (max-width: 991px) {
+			.title{
+				font-size: 2rem;	
+			}
+			.navbar-nav {
+				margin-right: 1rem;
+			}
+			.navbar-brand{
+				padding-top: 0.15rem;
+			}
+			#section1 .leftside {
+				padding-left: 0;
+			}
+			#section5 .pr-div .w-50{
+				width: 100% !important;
+				padding: 1rem; 
+			}
+			#section5 .latset-pr .pr-img {
+			    height: 12rem;
+			    overflow: hidden;
+			}
+			#section5 .pr-img-div {
+				height: 12rem
+			}
+			.form2 input {
+			    width: 60%;
+			}
+		}
+
+		@media only screen and (max-width: 575px) {
+			#section1 .leftside	{
+				padding-left: 1rem;
+			}
+			.navbar-brand {
+				position: static;
+				padding-left: 4rem;
+				padding-top: 0;
+			}
+			.topbar span{
+				display: inline-block;
+				font-size: 0.7rem
+			}
+			#section3 .w-75,
+			#section4 .w-75 {
+				width: 100% !important;
+				text-align: justify;
+			}
+			#section4 .title {
+				margin-top: 2rem;
+			}
+			#section5 .pr-div {
+				margin-bottom: 2rem;
+			}
+			#section5 .pr-div .w-50{
+				width: 100% !important;
+				padding: 1rem; 
+			}
+			#section5 .pr-img-div,
+			#section5 .latset-pr .pr-text {
+				height: inherit;
+			}
+			#section7 .reg-btn {
+				width: 100%;
+			}
+			.footer {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+			.form2 input {
+			    width: 78%;
+			}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<header class="container-fluid">
+
+      	<div class="row bg-navyblue p-2 text-white topbar">      		
+      		<div class="offset-lg-6 col-lg-6 offset-sm-3 col-sm-9">
+		      	<span class="me-3"> <i class="fa fa-phone fa-rotate-90 me-1"></i> +1-888-61-4454(TOLL-FREE) </span>
+		      	<span><i class="fa fa-envelope me-1"></i> support@researchdive.com </span>
+		    </div>
+	    </div>
+		<nav class="navbar navbar-expand-sm bg-white navbar-light ms-auto py-lg-3">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="#"><img src="img/amr-logo.png" alt="AMR Logo" width="180" height="98" ></a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		      <ul class="navbar-nav ms-auto gap-md-4 ">
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">About Us</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Consulting</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Reports</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Contact Us</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link login-btn" href="#">Login</a>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="container-fluid" id="section1">
+			<div class="row">				
+				<div class="col-md-6 col-12 leftside d-flex justify-content-center align-items-center bg-navyblue">
+					<div class="text-white p-lg-5 p-4">
+						<h1>Lorem ipsum dolor <br /><span class="text-orange">sit amet,</span> consectetur elit.</h1> 
+						<p>Lorem ipsum dolor duis aute irure dolor in reprehenderit in voluptate velit esse. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>						
+						<a href="#" class="text-decoration-none text-orange">View More</a>
+
+						<!-- Search Form -->
+						<form action="" method="" class="search-form">
+						  <div class="d-flex mb-3 mt-lg-5 mt-4">
+						  	<input type="text" class="form-control" id="search" placeholder="Search here" name="search">
+						  	<button type="submit" class="btn btn-primary bg-blue">Search</button>					  	
+						  </div>
+						</form>
+						<!-- Search Form Ended-->
+
+					</div>
+				</div>
+				<div class="col-md-6 col-12 p-0">
+					<img src="img/meeting-image.jpg" alt="Meeting Image" class="img-fluid w-100 h-100">
+				</div>
+			</div>
+		</section>
+
+		<!-- Section : Our Trending Publications -->
+		<section class="container mt-sm-5 mt-4" id="section2">
+			<h2 class="title">Our Trending <span class="text-orange">Publications</span></h2>
+			<p class="fs-4 text-center mb-sm-5 mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+			<div class="owl-carousel owl-theme oc-published-report mb-lg-4">
+				<!-- Published Report -->
+				<div class="item col-lg-4 col-sm-6 col-12 mb-3">
+					<div class="otp-img mx-auto">
+						<img src="img/img-body-armor.jpg" alt="Body Armor" class="img-fluid w-100 ">
+						<span class="year">July 2023</span>
+						<div class="rep-title">Global Body Armor Plates Market</div>
+						<div class="rep-overlay p-3">
+							<h3>Global Body Armor Plates Market</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							<br />
+							<button class="btn btn-outline-light">Read More</button>
+						</div>
+					</div>
+				</div><!-- Published Report Ended-->
+
+				<!-- Published Report -->
+				<div class="item col-lg-4 col-sm-6 col-12 mb-3">
+					<div class="otp-img mx-auto">
+						<img src="img/img-composite-concrete-deck.jpg" alt="Body Armor" class="img-fluid w-100 ">
+						<span class="year">July 2023</span>
+						<div class="rep-title">Global Composite Concrete Deck Market</div>
+						<div class="rep-overlay p-3">
+							<h3>Global Composite Concrete Deck Market</h3>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
+							<br />
+							<button class="btn btn-outline-light">Read More</button>
+						</div>
+					</div>
+				</div><!-- Published Report Ended-->
+
+				<!-- Published Report -->
+				<div class="item col-lg-4 col-sm-6 col-12 mb-3">
+					<div class="otp-img mx-auto">
+						<img src="img/img-bitcoin.jpg" alt="Body Armor" class="img-fluid w-100 ">
+						<span class="year">July 2023</span>
+						<div class="rep-title">Global Composite Concrete Deck Market</div>
+						<div class="rep-overlay p-3">
+							<h3>Global Composite Concrete Deck Market</h3>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco...</p>
+							<br />
+							<button class="btn btn-outline-light">Read More</button>
+						</div>
+					</div>
+				</div><!-- Published Report Ended-->
+			</div>
+			<div class="d-flex"><button class="btn btn-info btn-lg text-white view-all-btn mx-auto mt-sm-4 mt-2">View all</button></div>
+		</section>
+		<!-- Section : Our Trending Publications Ended-->
+
+		<!-- Section : What Makes us unique... -->
+		<section class="container px-lg-4" id="section3">
+			<div class="row">
+				<div class="col-md-6 col-12 pt-sm-5">
+					<h2 class="title text-sm-start text-center mb-3">What makes us <span class="text-orange">unique</span> <br />and <span class="text-orange">stand alone</span> ? </h2>
+					<p class="text w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur.</p>
+					
+				</div>
+				<div class="col-md-6 col-12">
+					<div class="row">
+						<div class="col-6">
+							<div class="px-3 py-2 samples bg-c-green">
+								<img src="img/analytics.png" alt="analytics" class="img-fluid" width="45" height="45">
+								<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit </p>
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="px-3 py-2 samples bg-c-blue">
+								<img src="img/analytics.png" alt="analytics" class="img-fluid" width="45" height="45">
+								<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit </p>
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="px-3 py-2 samples bg-c-orange">
+								<img src="img/analytics.png" alt="analytics" class="img-fluid" width="45" height="45">
+								<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit </p>
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="px-3 py-2 samples bg-c-red">
+								<img src="img/analytics.png" alt="analytics" class="img-fluid" width="45" height="45">
+								<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- Section : What Makes us unique... Ended-->			
+
+
+		<!-- Section : ...Best Policy -->
+		<section class="container mt-sm-5 mt-4" id="section4">
+			<div class="row">
+				<div class="col-md-6 col-12 bg-c-lightgray p-3 order-md-1 order-2">
+					<table class="tbl-best-policy">
+						<colgroup>
+							<col width="50%">
+							<col width="50%">
+						</colgroup>
+						<tr>
+							<td><span class="text-orange display-5 fw-bold">15,000+</span><br />
+								<span class="fs-4 text-uppercase">New Releases</span></td>
+							<td class="text px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+						</tr>
+						<tr><td colspan="2"></td></tr>
+						<tr>
+							<td><span class="text-orange display-5 fw-bold">80</span><br />
+								<span class="fs-4 text-uppercase">Paid Datasources</span></td>
+							<td class="text px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+						</tr>	
+						<tr><td colspan="2"></td></tr>
+						<tr>
+							<td><span class="text-orange display-5 fw-bold">450+</span><br />
+								<span class="fs-4 text-uppercase">counselors</span></td>
+							<td class="text px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+						</tr>
+						<tr><td colspan="2"></td></tr>
+						<tr>
+							<td><span class="text-orange display-5 fw-bold">65</span><br />
+								<span class="fs-4 text-uppercase">Industry Mavens</span></td>
+							<td class="text px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+						</tr>
+						<tr><td colspan="2"></td></tr>
+						<tr>
+							<td><span class="text-orange display-5 fw-bold">360<sup class="fw-normal">o</sup></span><br />
+								<span class="fs-5 text-uppercase">Research Methodology</span></td>
+							<td class="text px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+						</tr>
+					</table>
+			
+				</div>
+				<div class="col-md-6 col-12 order-md-2 order-1">
+					<h2 class="title text-start mb-3 mt-sm-5 text-capitalize"> We take recourse to the <span class="text-orange">best&nbsp;policy </span> </h2>
+					<p class="text w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					ris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>		
+				</div>
+			</div>
+		</section>
+		<!-- Section : ...Best Policy Ended-->			
+
+		<br />
+		<!-- Section : Latest Publications -->
+		<section class="container-fluid mt-sm-5 mt-4" id="section5">
+			<h2 class="title">Latest Press Release </h2>
+			<br />
+			<div class="row latset-pr">
+				<div class="col-md-6 col-12 p-sm-0 pr-div">
+					<div class="pr1">						
+						<div class="py-4 w-50 mx-auto pr-text">
+							<span>July 10, 2023</span>
+							<p class="fs-5 fw-bold text-capitalize">Green Mining Market Size Projected To Generate A Revenue Of $27911.3 Million By 2032</p>
+						</div>
+					</div>
+					<div class="pr-img-div">						
+						<div class="pr-img">						
+							<img src="img/green-mining-market.jpg" alt="Green Mining Market" class="img-fluid">			
+						</div>
+						<a href="" class="text-reset text-decoration-none">
+							<div class="read-all-pr text-white">Read all press release <i class="fa fa-angle-right"></i></div>	
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-12 p-sm-0 pr-div">
+					<div class="pr2">						
+						<div class="py-4 w-50 mx-auto pr-text">
+							<span>July 10, 2023</span>
+							<p class="fs-5 fw-bold text-capitalize">Education Computing Devices Market Size Is Projected To Grow At A CAGR Of 14.10% And Generate A Revenue Of $368,072.50 Million By 2032</p>
+						</div>
+					</div>
+					<div class="pr-img-div">						
+						<div class="pr-img">
+							<img src="img/education-computing-devices-market.jpg" alt="Education Computing Devices Market" class="img-fluid">
+						</div>
+						<a href="" class="text-reset text-decoration-none">
+							<div class="read-all-pr text-white">Read all press release <i class="fa fa-angle-right"></i></div>	
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section : Latest Publications Ended -->
+		
+		<!-- Section : ..help -->
+		<section class="container-fluid mt-sm-5 mt-4 bg-navyblue" id="section6">
+			<div class="help">				
+				<h3 class="fs-1">How can we help you?</h3>
+				<p class="fs-5 fw-normal"><span class="text-orange">Get in touch</span> with us or <span class="text-orange">find an office</span> closest to you.</p>
+			</div>
+		</section>
+		<!-- Section : ..help ended -->
+
+		<!-- Section : Get Notification -->
+		<section class="container-fluid pt-sm-5 pt-4" id="section7">
+			<h3 class="title text-center mb-sm-5 mb-4">Get Notification</h3>
+			<div class="row w-75 mx-auto">
+				<div class="col-sm-6 col-12 mb-4 position-relative">
+					<select class="form-control" name="category">
+						<option value="">Select Category</option>
+						<option value="cat1"> Category - 1</option>
+						<option value="cat2"> Category - 2</option>
+						<option value="cat3"> Category - 3</option>
+						<option value="cat4"> Category - 4</option>
+						<option value="cat5"> Category - 5</option>
+					</select>
+					<i class="fa fa-angle-down"></i>
+				</div>
+
+				<div class="col-sm-6 col-12 mb-4 position-relative">
+					<select class="form-control" name="frequency">
+						<option value="">Select Frequency</option>
+						<option value="freq1"> Frequency - 1</option>
+						<option value="freq2"> Frequency - 2</option>
+						<option value="freq3"> Frequency - 3</option>
+						<option value="freq4"> Frequency - 4</option>
+						<option value="freq5"> Frequency - 5</option>
+					</select>
+					<i class="fa fa-angle-down"></i>
+				</div>
+				<div class="col-12">
+					<input type="email" name="email" class="form-control" placeholder="Email">
+				</div>
+				<div>
+					<button type="submit" name="submit" class="btn reg-btn">Register now</button>
+				</div>
+			</div>
+		</section>
+		<!-- Section : Get Notification Ended-->
+	</main>
+	
+	<footer class="container-fluid bg-navyblue text-white pt-5 pb-2 footer">
+		<div class="row">
+			<div class="offset-sm-4 col-sm-8 col-12">
+				<p class="fs-5 dummy-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. </p>
+			</div>
+		</div>
+		<br />
+		<div class="row pb-lg-5">
+			<div class="col-sm-4 col-12">
+				<form method="" action="" class="form2">					
+					<input type="text" name="" placeholder="Your email">
+					<button>Register</button>
+				</form>
+			</div>
+			<div class="col-sm-8 col-12">
+				<div class="row">
+					<div class="col-sm-4 col-12">
+						<div class="title2">The Company</div>
+						<ul class="list-unstyled">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Why Research Dive?</a></li>
+							<li><a href="#">Research Methodology</a></li>
+							<li><a href="#">Career</a></li>
+							<li><a href="#">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-12">
+						<div class="title2">Services</div>
+						<ul class="list-unstyled">
+							<li><a href="#"> Syndicate Reports</a></li>
+							<li><a href="#"> Customzed Reports</a></li>
+							<li><a href="#"> Consulting Services</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-12">
+						<div class="title2">Find Help</div>
+						<ul class="list-unstyled">
+							<li><a href="#"> GDPR Policy</a></li>
+							<li><a href="#"> Privacy Policy</a></li>
+							<li><a href="#"> Return Policy</a></li>
+							<li><a href="#"> Delivery Method</a></li>
+							<li><a href="#"> Terms and Conditions</a></li>							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div class="disclaimer d-md-flex justify-content-between">
+			<div class="small mb-2">				
+				<a href="#">Disclaimer</a>&nbsp;|
+				<a href="#">Sitemap</a>&nbsp;|
+				<a href="#">Contact Us</a>
+			</div>
+			<div class="small mb-2">
+				<p>&copy; 2023 Research Dive. All Rights Reserved</p>		
+			</div>		
+		</div>
+	</footer>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://www.theinsightpartners.com/assets/js/owl-carousel/owl.carousel.min.js"></script>
+
+	<script type="text/javascript">
+		$('.oc-published-report').owlCarousel({
+			items : 3,
+			loop : true,
+			merge : true,
+			autoplay : true,
+			autoplayTimeout : 2000,
+			autoplayHoverPause : true,
+			nav: true,
+			dots: false,
+			responsive:{
+				320 : {
+						items : 1
+				    },
+
+				576 : {
+						items : 2
+				    },
+
+				1200 : {
+						items : 3 
+				    },
+
+			   }
+		   });
+	</script>
+
+</body>
+</html>
